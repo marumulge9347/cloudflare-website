@@ -1,0 +1,14 @@
+{
+    "name": "cloudflare-website",
+    "version": "1.0.0",
+    "private": true,
+    "scripts": {
+        "dev": "concurrently \"npm --prefix apps/api run dev\" \"npm --prefix apps/web run dev\"",
+        "dev:api": "npm --prefix apps/api run dev",
+        "dev:web": "npm --prefix apps/web run dev",
+        "install:all": "npm install && npm --prefix apps/api install && npm --prefix apps/web install"
+    },
+    "devDependencies": {
+        "concurrently": "^9.1.2"
+    }
+}
