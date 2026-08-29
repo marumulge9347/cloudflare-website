@@ -20,6 +20,8 @@ const tagRoutes = require("./routes/tagRoutes");
 
 const errorHandler = require("./middleware/errorHandler");
 
+const publicRoutes = require("./routes/publicRoutes");
+
 async function startServer() {
   try {
     validateEnv();
@@ -67,6 +69,8 @@ async function startServer() {
     app.use("/api/tags", tagRoutes);
 
     app.use("/api/posts", postRoutes);
+
+    app.use("/api/public", publicRoutes);
 
     app.use((req, res) => {
       res.status(404).json({

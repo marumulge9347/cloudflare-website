@@ -1,0 +1,49 @@
+{
+    "success": true,
+    "posts": [
+        {
+            "seo": {
+                "metaTitle": "Getting Started With Cloudflare Workers",
+                "metaDescription": "Learn the basics of Cloudflare Workers.",
+                "keywords": [
+                    "Cloudflare",
+                    "Workers",
+                    "Serverless"
+                ],
+                "canonicalUrl": ""
+            },
+            "_id": "6a91cc17a06e2f5d1c97892b",
+            "title": "Getting Started With Cloudflare Workers",
+            "slug": "getting-started-with-cloudflare-workers",
+            "excerpt": "A beginner-friendly introduction to Cloudflare Workers.",
+            "featuredImage": "",
+            "category": {
+                "_id": "6a91c1d5b74a424374db7b79",
+                "name": "Cloudflare",
+                "slug": "cloudflare"
+            },
+            "tags": [
+                {
+                    "_id": "6a91c360861712f1fe65a424",
+                    "name": "Workers",
+                    "slug": "workers"
+                }
+            ],
+            "author": {
+                "_id": "6a91b2e2045e9492f1ab4039",
+                "name": "Administrator"
+            },
+            "publishedAt": "2026-08-29T02:51:16.927Z",
+            "views": 0,
+            "createdAt": "2026-08-28T17:57:43.675Z"
+        }
+    ],
+    "pagination": {
+        "page": 1,
+        "limit": 10,
+        "total": 1,
+        "totalPages": 1,
+        "hasNextPage": false,
+        "hasPreviousPage": false
+    }
+}
