@@ -108,6 +108,23 @@ export function createCategory(category) {
   });
 }
 
+export function getCategory(id) {
+  return request(`/categories/${id}`);
+}
+
+export function updateCategory(id, category) {
+  return request(`/categories/${id}`, {
+    method: "PUT",
+    body: JSON.stringify(category),
+  });
+}
+
+export function deleteCategory(id) {
+  return request(`/categories/${id}`, {
+    method: "DELETE",
+  });
+}
+
 /*
 |--------------------------------------------------------------------------
 | Tags
@@ -122,6 +139,22 @@ export function createTag(tag) {
   return request("/tags", {
     method: "POST",
     body: JSON.stringify(tag),
+  });
+}
+export function getTag(id) {
+  return request(`/tags/${id}`);
+}
+
+export function updateTag(id, tag) {
+  return request(`/tags/${id}`, {
+    method: "PUT",
+    body: JSON.stringify(tag),
+  });
+}
+
+export function deleteTag(id) {
+  return request(`/tags/${id}`, {
+    method: "DELETE",
   });
 }
 

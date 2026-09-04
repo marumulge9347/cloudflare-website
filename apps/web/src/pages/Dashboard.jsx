@@ -82,6 +82,15 @@ export default function Dashboard() {
                 Create a new article
               </p>
             </Link>
+            <Link to="/categories" className="rounded-xl border p-5 hover:bg-slate-50">
+              <h3 className="font-semibold">Categories</h3>
+                <p className="mt-1 text-sm text-slate-500">Manage categories</p>
+            </Link>
+
+            <Link to="/tags" className="rounded-xl border p-5 hover:bg-slate-50">
+             <h3 className="font-semibold">Tags</h3>
+             <p className="mt-1 text-sm text-slate-500">Manage tags</p>
+            </Link>
 
             <div className="rounded-xl border p-5">
               <h3 className="font-semibold">AI Writer</h3>
