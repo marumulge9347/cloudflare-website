@@ -6,15 +6,7 @@ import ArticleEditor from "./pages/ArticleEditor";
 import PublicBlog from "./pages/PublicBlog";
 import PublicArticle from "./pages/PublicArticle";
 
-function PostsPlaceholder() {
-  return (
-    <div className="p-8">
-      <h1 className="text-2xl font-bold">Posts</h1>
-
-      <p className="mt-2 text-slate-500">Posts management is coming next.</p>
-    </div>
-  );
-}
+import Posts from "./pages/Posts";
 
 export default function App() {
   return (
@@ -26,7 +18,7 @@ export default function App() {
 
         <Route path="/dashboard" element={<Dashboard />} />
 
-        <Route path="/posts" element={<PostsPlaceholder />} />
+        <Route path="/posts" element={<Posts />} />
 
         <Route path="/posts/new" element={<ArticleEditor />} />
 
