@@ -22,6 +22,8 @@ const errorHandler = require("./middleware/errorHandler");
 
 const publicRoutes = require("./routes/publicRoutes");
 
+const aiRoutes = require("./routes/aiRoutes");
+
 async function startServer() {
   try {
     validateEnv();
@@ -71,6 +73,8 @@ async function startServer() {
     app.use("/api/posts", postRoutes);
 
     app.use("/api/public", publicRoutes);
+
+    app.use("/api/ai", aiRoutes);
 
     app.use((req, res) => {
       res.status(404).json({

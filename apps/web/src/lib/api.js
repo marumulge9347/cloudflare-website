@@ -183,3 +183,55 @@ export function getPublicTags() {
 export function getFeaturedPosts(limit = 5) {
   return request(`/public/featured?limit=${limit}`);
 }
+
+/*
+|--------------------------------------------------------------------------
+| AI Writer
+|--------------------------------------------------------------------------
+*/
+
+export function generateAIArticle({
+  topic,
+  tone = "professional",
+  length = "medium",
+  keywords = [],
+}) {
+  return request("/ai/article", {
+    method: "POST",
+
+    body: JSON.stringify({
+      topic,
+      tone,
+      length,
+      keywords,
+    }),
+  });
+}
+
+export function generateAISEO({
+  title,
+  content,
+}) {
+  return request("/ai/seo", {
+    method: "POST",
+
+    body: JSON.stringify({
+      title,
+      content,
+    }),
+  });
+}
+
+export function improveAIContent({
+  content,
+  instruction,
+}) {
+  return request("/ai/improve", {
+    method: "POST",
+
+    body: JSON.stringify({
+      content,
+      instruction,
+    }),
+  });
+}

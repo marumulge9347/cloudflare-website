@@ -9,11 +9,11 @@ const { env } = require("./env");
 dns.setServers(["8.8.8.8", "1.1.1.1"]);
 
 async function connectDatabase() {
-  if (!env.mongodbUri) {
+  if (!env.mongoUri) {
     throw new Error("MONGODB_URI is not configured");
   }
 
-  await mongoose.connect(env.mongodbUri, {
+  await mongoose.connect(env.mongoUri, {
     family: 4,
   });
 

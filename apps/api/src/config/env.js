@@ -1,34 +1,38 @@
-const dotenv = require("dotenv");
-
-dotenv.config();
+require("dotenv").config();
 
 const env = {
-  nodeEnv: process.env.NODE_ENV || "development",
+  port: process.env.PORT || 5000,
 
-  port: Number(process.env.PORT) || 5000,
-
-  clientUrl: process.env.CLIENT_URL || "http://localhost:5173",
-
-  mongodbUri: process.env.MONGODB_URI,
+  mongoUri: process.env.MONGODB_URI,
 
   jwtSecret: process.env.JWT_SECRET,
 
   jwtExpiresIn: process.env.JWT_EXPIRES_IN || "7d",
 
-  adminEmail: process.env.ADMIN_EMAIL || "admin@example.com",
-
-  adminPassword: process.env.ADMIN_PASSWORD,
+  clientUrl: process.env.CLIENT_URL || "http://localhost:5173",
 
   openRouterApiKey: process.env.OPENROUTER_API_KEY,
+
+  openRouterModel: process.env.OPENROUTER_MODEL || "openrouter/free",
+
+  openRouterSiteUrl: process.env.OPENROUTER_SITE_URL || "http://localhost:5173",
+
+  openRouterSiteName:
+    process.env.OPENROUTER_SITE_NAME || "Cloudflare Website CMS",
 };
 
 function validateEnv() {
-  const required = ["mongodbUri", "jwtSecret"];
+  const required = [
+    ["MONGODB_URI", env.mongoUri],
+    ["JWT_SECRET", env.jwtSecret],
+  ];
 
-  const missing = required.filter((key) => !env[key]);
+  const missing = required.filter(([, value]) => !value).map(([name]) => name);
 
   if (missing.length > 0) {
-    throw new Error(`Missing environment variables: ${missing.join(", ")}`);
+    throw new Error(
+      `Missing required environment variables: ${missing.join(", ")}`,
+    );
   }
 }
 

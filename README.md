@@ -85,8 +85,8 @@ The project is being developed as a production-style blogging platform with an a
 
 ### Planned
 
-- [ ] React + Vite frontend
-- [ ] Admin dashboard
+- [x] React + Vite frontend
+- [x] Admin dashboard
 - [ ] Article editor
 - [ ] Category management UI
 - [ ] Tag management UI
